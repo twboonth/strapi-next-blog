@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "authors",
+  "info": {
+    "singularName": "author",
+    "pluralName": "authors",
+    "displayName": "Author"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "Publisher": {
+      "type": "string"
+    },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "author"
+    },
+    "spacial_blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::spacial-blog.spacial-blog",
+      "mappedBy": "author"
+    }
+  }
+}
